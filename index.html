@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vector Technologies</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Wire+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Wire+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div id="logoDiv">
+            <img src="assets/5.png" alt="VT" id="logo">
+        </div>
+
+        <div id="sections">
+            <button class="burgerMenu" id="burgerToggle">
+                <div id="burger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </button>
+            
+            <ul class=navLinks id="navMenu">
+                <li><a href="#homeDiv">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#servicesContainer">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </div>
+        </div>
+    </header>
+
+    <section id="homeDiv">
+        <!-- <img src="assets/pexels-polina-zimmerman-3747102.jpg" alt=""> -->
+        <p id="slogan">The <span id="rightMove">Right Move</span> for business software solutions</p>
+    </section>
+    <section id="about">
+        <p id="aboutHeading" class="headings">
+            About Us
+        </p>
+        <p id="aboutParagraph">
+            Established in 2026 and based in Johannesburg, Vector Technologies was built with the intention of helping small to medium sized businesses (SMMEs) establish a digital presence to introduce a these businesses to a larger audience.
+            We specialize in Website Development, App Development, AI integration, Search Engine Optimization (SEO) and more.
+            Our clients are our most important asset, and the quality and professionalism in our work reflects that.
+
+        </p>
+        <div id="cardsContainer">
+            <div id="descriptionCards">
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-arrow-trend-up fa-fw"></i>
+                    </div>
+                    <p class="card-title">
+                        Powering SMME Growth
+                    </p>
+                    <p class="card-description">
+                        Vector Technologies builds the digital tools that small-to-medium sized business growth.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-laptop fa-fw"></i>
+                    </div>
+                    <p class="card-title">
+                        Smart Software Solutions
+                    </p>
+                    <p class="card-description">
+                        We specialize in custom websites, mobile apps, and AI automation designed to save you time and connect you with more customers.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fa-regular fa-handshake fa-fw"></i>
+                    </div>
+                    <p class="card-title">
+                        Your Technical Partner
+                    </p>
+                    <p class="card-description">
+                        As your long-term technical partner, we handle your software needs so you can focus on what you do best.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicesContainer" >
+        <p id="servicesHeading" class="headings">Our Services</p>
+
+        <!-- Radio inputs placed as siblings to the service sections so CSS can target them -->
+        <input type="radio" name="serviceTab" id="tab-web" checked hidden>
+        <input type="radio" name="serviceTab" id="tab-mobile" hidden>
+        <input type="radio" name="serviceTab" id="tab-ai" hidden>
+
+        <div id="toggleMenu">
+            <label for="tab-web" class="tab">Web</label>
+            <label for="tab-mobile" class="tab">Mobile</label>
+            <label for="tab-ai" class="tab">AI</label>
+        </div>
+
+        <div id="webServices" class="serviceCards">
+            <p id="serviceTitle">Website Development</p>
+            <div id="standardTier" class="tierCards">
+                <div id="title" class="card-heading">Standard Tier</div>
+                <div id="description" class="card-description2">
+                    <p>New businesses needing a professional digital storefront to establish credibility and capture local search traffic.</p>
+                </div>
+                <div id="servicesList" class="card-services">
+                    <ul>
+                        <li>3-to-5 page informational website (Home, About, Services, Contact).</li>
+                        <li>Mobile-responsive design</li>
+                        <li>Basic SEO setup</li>
+                        <li>Standard contact form</li>
+                        <li>Google Business Profile connection</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="intermediateTier" class="tierCards">
+                <div id="title" class="card-heading">Intermediate Tier</div>
+                <div id="description" class="card-description2">
+                    <p>Growing businesses that need to process online appointments, sell a small inventory, or track visitor behavior.</p>
+                </div>
+                <div id="servicesList" class="card-services">
+                    <ul>
+                        <li>5 to 10-page CMS website (e.g., WordPress)</li>
+                        <li>Includes integration for a basic booking system or simple e-commerce (up to 50 products)</li>
+                        <li>Blog setup</li>
+                        <li>Google Analytics tracking</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="premiumTier" class="tierCards">
+                <div id="title" class="card-heading">Premium Tier</div>
+                <div id="description" class="card-description2">
+                    <p>Established, high-volume businesses requiring custom workflows, deep integrations, and large-scale digital operations.</p>
+                </div>
+                <div id="servicesList" class="card-services">
+                    <ul>
+                        <li>Fully custom-developed web application</li>
+                        <li>Includes advanced e-commerce (unlimited products, complex variations)</li>
+                        <li>Secure user login portals</li>
+                        <li>Custom API integrations with accounting/inventory software</li>
+                        <li>Advanced speed optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobileServices" class="serviceCards">
+            <p id="serviceTitle">Mobile Apps</p>
+            <div id="standardTier" class="tierCards">
+                <div id="title" class="card-heading">Standard Tier</div>
+                <div id="description" class="card-description2">
+                    <p>Businesses wanting an app-like presence on a customer's phone without the high cost of native app store development.</p>
+                </div>
+                <div id="servicesList" class="card-services">
+                    <ul>
+                        <li>Progressive Web App (PWA)</li>
+                        <li>A highly optimized mobile version of the website that can be saved to a phone's home screen</li>
+                        <li>Basic offline capabilities</li>
+                        <li>Simple push notifications</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="intermediateTier" class="tierCards">
+                <div id="title" class="card-heading">Intermediate Tier</div>
+                <div id="description" class="card-description2">
+                    Retailers, car washes, or restaurants focused on building repeat customer loyalty and direct mobile engagement.
+                </div>
+                <div id="servicesList" class="card-services">
+                    <ul>
+                        <li>Cross-platform mobile app (available on iOS and Android)</li>
+                        <li>User accounts</li>
+                        <li>Digital loyalty point systems</li>
+                        <li>In-App messaging</li>
+                        <li>Direct mobile ordering or service booking</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="premiumTier" class="tierCards">
+                <div id="title" class="card-heading">Premium Tier</div>
+                <div id="description" class="card-description2">High-scale franchises or tech-centric startups requiring heavy processing power, hardware integration, or complex user journeys.</div>
+                <div id="servicesList" class="card-services">
+                    <ul>
+                        <li>Fully custom native mobile application</li>
+                        <li>Complex backend databases</li>
+                        <li>Real-time geolocation tracking (e.g., for deliveries)</li>
+                        <li>Secure in-app payment gateways</li>
+                        <li>Advanced user analytics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="aiServices" class="serviceCards">
+            <p id="serviceTitle">AI Integration</p>
+            <div id="standardTier" class="tierCards">
+                <div id="title" class="card-heading">Standard Tier</div>
+                <div id="description" class="card-description2">
+                    <p>Businesses that want to reduce the volume of basic repetitive questions filtering through their phone lines.</p>
+                </div>
+                <div id="servicesList" class="card-services">
+                    <ul>
+                        <li>Basic rule-based website chatbot</li>
+                        <li>Programmed with static responses to frequently asked questions, trading hours, and location details using simple button-click menus</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="intermediateTier" class="tierCards">
+                <div id="title" class="card-heading">Intermediate Tier</div>
+                <div id="description" class="card-description2">
+                    <p>High-traffic shops (like phone repair or salons) needing intelligent automated customer service that understands natural language.</p>
+                </div>
+                <div id="servicesList" class="card-services">
+                    <ul>
+                        <li>LLM-powered conversational chatbot trained on specific business data (PDF price lists, service details)</li>
+                        <li>WhatsApp integration</li>
+                        <li>Intelligent lead capture to collect customer contact info before handing off to a human</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="premiumTier" class="tierCards">
+                <div id="title" class="card-heading">Premium Tier</div>
+                <div id="description" class="card-description2">
+                    <p>Operations seeking to fully automate their customer intake, support, and administrative booking processes 24/7.</p>
+                </div>
+                <div id="servicesList" class="card-services">
+                    <ul>
+                        <li>Full AI workflow automation</li>
+                        <li>Includes multi-channel conversational agents (Website, WhatsApp, Social Media) capable of dynamic appointment scheduling directly into your calendar</li>
+                        <li>Automated quote generation</li>
+                        <li>CRM syncing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <p class="headings">Contact Us</p>
+        <div id="contactLogos">
+            <a href="https://www.instagram.com/vect.ortechnologies">
+                <i class="fa-brands fa-instagram"></i>
+                <p>vect.ortechnologies</p>
+            </a>
+            <a href="">
+                <i class="fa-brands fa-facebook"></i>
+                <p>Vector Technologies</p>
+            </a>
+            <a href="">
+                <i class="fa-brands fa-x-twitter"></i>
+                <p>vectortechnologies</p>
+            </a>
+            <a href="">
+                <i class="fa-regular fa-envelope"></i>
+                <p>siphumelele@vectortechnologies.co.za</p>
+            </a>
+            <a href="">
+                <i class="fa-solid fa-phone"></i>
+                <p>+27 73 959 3189 (Siphumelele Buthelezi, Technical Director)</p>
+            </a>
+        </div>
+    </section>
+
+    <section id="footer">
+        <p>Vector Technologies ®2026. All Rights Reserved</p>
+        <div id="footerIcons">
+            <a href="https://www.instagram.com/vect.ortechnologies">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+        </div>
+    </section>
+
+    <script src="https://kit.fontawesome.com/177465f790.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,385 @@
+@font-face {
+    font-family: "Montserrat", "IBM Plex Serif", serif;
+    src: url();
+}
+body {
+    font-family: "Montserrat", "IBM Plex Serif", serif;
+    background-color: #fff9f3;
+    color: rgb(93, 83, 64);
+}
+header {
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* border: 1px black solid; */
+    border-radius: 33px;
+    padding: 10px;
+    /* position: sticky;
+    top: 0;
+    z-index: 1000; */
+    /* background-color: blue; */
+    /* background-color: rgba(255, 255, 255, 0.7); 
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px); */
+}
+header div {
+    justify-content: center;
+    align-items: center;
+}
+#logoDiv img {
+    border-radius: 20px;
+}
+.navLinks.active {
+  right: 0;
+}
+.burgerMenu.active div:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.burgerMenu.active div:nth-child(2) {
+  opacity: 0; /* Hide middle line */
+}
+.burgerMenu.active div:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+#burgerToggle {
+    display: none;
+}
+@media (max-width: 750px) {
+    #navMenu {
+        display: none;
+    }
+    #burgerToggle {
+        display: contents;
+    }
+}
+#burger div {
+    /* display: none; */
+    border: 2px solid rgb(93, 83, 64);
+    width: 40px;
+    /* padding: 0px; */
+    margin-bottom: 10px;
+}
+#sections {
+    display: flex;
+    flex-direction: row;
+    /* border: 4px #5d5340 solid; */
+    justify-content: center;
+    align-content: center;
+    border-radius: 33px;
+}
+#sections a {
+    padding: 40px;
+    text-decoration: none;
+    color: rgb(93, 83, 64);
+}
+#logo {
+    height: 90px;
+}
+#homeDiv {
+    border: 3px solid #fff9f3;
+    border-radius: 30px;
+    padding: 20px;
+    background-image: url(assets/pexels-polina-zimmerman-3747102.jpg);
+    /* background-size: cover; */
+    background-attachment: fixed;
+    /* background-position: center center; */
+    /* background-repeat: ; */
+    margin-top: 20px;
+}
+#slogan {
+    font-family: 'League Spartan', serif;
+    font-weight: 1000;
+    font-size: 7rem;
+    /* padding: 10px; */
+    margin-left: 30px;
+    /* text-shadow: 2px 4px 7px #fae4ce; */
+}
+#rightMove {
+    color: #8ca87c;
+    text-shadow: 2px 5px 4px #5d5340;
+}
+.headings {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-top: 6rem;
+}
+#aboutParagraph {
+    padding: 30px;
+}
+#cardsContainer {
+    /* border: 1px black solid; */
+    padding: 10px;
+    position: relative;
+    /* border-radius: 24px; */
+}
+
+#descriptionCards {
+    position: relative;
+    display: grid;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.card {
+    padding: 20px;
+    border: 6px solid rgb(133, 120, 99);
+    border-radius: 24px;
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "icon"
+        "title"
+        "description";
+    text-align: center;
+    margin-bottom: 1rem;
+    /* background: rgba(255, 249, 243, 0.92); */
+    /* border-right: 6px solid #8ca87c; */
+    color: rgb(229, 209, 156);
+    background-image: linear-gradient(145deg, #2b2a24, rgb(51, 46, 38)), 
+                    linear-gradient(5deg, #ff6b6b, #4ecdc4);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+.card-icon {
+    width: 6rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: icon;
+    margin: 0 auto;
+}
+
+.card-title {
+    margin: 0;
+    font-size: 1.5rem;
+    grid-area: title;
+    align-self: center;
+    font-weight: 700;
+}
+
+.card-description {
+    margin: 0;
+    grid-area: description;
+    line-height: 1.5;
+}
+
+@media (max-width: 1260px) {
+    .card {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "icon"
+            "title"
+            "description";
+        text-align: center;
+    }
+    .card-icon {
+        margin: 0 auto;
+    }
+}
+i {
+    font-size: 5rem;
+    /* border: 1px black solid; */
+}
+
+#toggleMenu {
+    display: flex;
+    justify-content: space-evenly;
+    /* padding: 5rem; */
+}
+
+.serviceCards {
+    display: none;
+    padding: 30px;
+}
+
+/* Keep existing anchor styles but we'll use labels for the CSS-only tabs */
+#toggleMenu a,
+#toggleMenu .tab {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+#toggleMenu a:hover,
+#toggleMenu .tab:hover {
+    text-decoration: underline;
+}
+
+/* CSS-only tabs: radio inputs + labels control which service section is visible */
+#toggleMenu {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    padding: 100px;
+}
+
+#toggleMenu .tab {
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 8px;
+    color: inherit;
+}
+
+/* show the right section when radio is checked -- use grid so cards align to equal heights */
+#tab-web:checked ~ #webServices,
+#tab-mobile:checked ~ #mobileServices,
+#tab-ai:checked ~ #aiServices {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;
+    grid-auto-rows: 1fr; /* make rows equal height */
+}
+
+/* style active tab label */
+#tab-web:checked ~ #toggleMenu label[for="tab-web"],
+#tab-mobile:checked ~ #toggleMenu label[for="tab-mobile"],
+#tab-ai:checked ~ #toggleMenu label[for="tab-ai"] {
+    background: rgba(0,0,0,0.06);
+    font-weight: 700;
+}
+
+.tierCards {
+    /* High-contrast dark card with bright accents */
+    background: linear-gradient(180deg, #2b2a24 0%, #1b1a17 100%);
+    color: #fff9f0;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 10px 30px rgba(10,10,10,0.5);
+    border: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-height: 200px;
+    flex: 1 1 auto; /* allow cards to stretch equally inside the grid */
+}
+
+.serviceCards {
+    align-items: stretch;
+}
+
+#serviceTitle {
+    font-size: 2rem;
+    font-weight: 500;
+    justify-content: center;
+    align-content: center;
+}
+
+.card-heading {
+    font-weight: 500;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    border: 2px black solid;
+    height: 40px;
+    
+}
+
+.card-description2 {
+    /* border: 2px black solid; */
+    margin-top: 0px;
+    border-bottom: #f3efd9 2px solid;
+    /* box-shadow:#f3efd9 2px ; */
+}
+
+.card-heading {
+    font-weight: 700;
+    font-size: 1.05rem;
+    text-align: center;
+    margin: 0;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #7bbf7b 0%, #5aa95a 100%);
+    color: #09240a;
+}
+
+.card-description2 {
+    margin: 0;
+    color: #f6f1e6;
+    line-height: 1.45;
+}
+
+.card-services {
+    margin-top: 6px;
+}
+
+.card-services ul {
+    padding-left: 1rem;
+    margin: 0;
+}
+.card-services li {
+    margin: 6px 0;
+    padding-left: 18px;
+    position: relative;
+    color: #f3efd9;
+}
+.card-services li:before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #a8e89a;
+    display: inline-block;
+    border-radius: 2px;
+    position: absolute;
+    left: 0px;
+    top: 6px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#contactLogos a {
+    color: rgb(93, 83, 64);
+    text-decoration: none;
+    display: flex;
+    padding: 35px;
+}
+
+#contactLogos {
+    margin-bottom: 60px;
+}
+
+#contactLogos p {
+    padding: 15px;
+}
+
+#contactLogos a:hover {
+    color: rgb(128, 110, 75);
+}
+
+#footer {
+    height: 200px;
+    background: linear-gradient(180deg, #2b2a24 0%, #1b1a17 100%);
+    border-radius: 50px;
+    display: grid;
+    padding: 35px;
+    color: #f6f1e6;
+}
+
+#footerIcons {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+#footerIcons i {
+    color: #f6f1e6;
+    font-size: 50px;
+    text-decoration: none;
+    padding: 35px;
+}
+
+#footerIcons i:hover {
+    color: rgb(128, 110, 75);
+}
