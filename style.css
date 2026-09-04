@@ -30,18 +30,6 @@ header div {
 #logoDiv img {
     border-radius: 20px;
 }
-.navLinks.active {
-  right: 0;
-}
-.burgerMenu.active div:nth-child(1) {
-  transform: translateY(9px) rotate(45deg);
-}
-.burgerMenu.active div:nth-child(2) {
-  opacity: 0; /* Hide middle line */
-}
-.burgerMenu.active div:nth-child(3) {
-  transform: translateY(-9px) rotate(-45deg);
-}
 #burgerToggle {
     display: none;
 }
