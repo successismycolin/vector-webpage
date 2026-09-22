@@ -34,14 +34,53 @@ header div {
     display: none;
 }
 @media (max-width: 750px) {
+    #sections {
+        position: relative;
+    }
+
     #navMenu {
         display: none;
+        position: absolute;
+        top: calc(100% + 12px);
+        right: 0;
+        z-index: 10;
+        min-width: 180px;
+        padding: 8px;
+        flex-direction: column;
+        gap: 2px;
+        border: 1px solid rgba(93, 83, 64, 0.2);
+        border-radius: 14px;
+        background: #fff9f3;
+        box-shadow: 0 10px 24px rgba(93, 83, 64, 0.18);
     }
+
+    #navMenu.active {
+        display: flex;
+    }
+
+    #navMenu a {
+        display: block;
+        padding: 12px 14px;
+        border-radius: 8px;
+    }
+
+    #navMenu a:hover,
+    #navMenu a:focus-visible {
+        background: rgba(140, 168, 124, 0.2);
+    }
+
     #burgerToggle {
-        display: contents;
+        display: block;
+        width: 44px;
+        height: 44px;
+        padding: 8px 4px;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
     }
 }
 #burger div {
+    /* margin-right: 10px; */
     /* display: none; */
     border: 2px solid rgb(93, 83, 64);
     width: 40px;
@@ -92,7 +131,7 @@ header div {
     flex-direction: row;
     justify-content: center;
     font-size: 4rem;
-    font-weight: 700;
+    font-weight: 500;
     margin-top: 6rem;
 }
 #aboutParagraph {
@@ -194,7 +233,7 @@ i {
 #toggleMenu a,
 #toggleMenu .tab {
     text-decoration: none;
-    font-weight: 500;
+    /* font-weight: 500; */
     font-size: 2rem;
 }
 
@@ -208,7 +247,18 @@ i {
     display: flex;
     justify-content: space-evenly;
     gap: 1rem;
-    padding: 100px;
+    padding: 40px;
+}
+
+@media (max-width: 700px) {
+    #toggleMenu {
+        padding: 0px;
+    }
+
+    .serviceCards #serviceTitle {
+        /* max-height: 0px; */
+
+    }
 }
 
 #toggleMenu .tab {
@@ -258,8 +308,8 @@ i {
 
 #serviceTitle {
     font-size: 2rem;
-    font-weight: 500;
-    justify-content: center;
+    font-weight: 700;
+    /* justify-content: center; */
     align-content: center;
 }
 
